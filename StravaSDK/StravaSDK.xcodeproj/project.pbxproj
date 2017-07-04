@@ -1,0 +1,523 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AD00A85F495CBB06824D06F5 /* Pods_StravaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2632F47FC4B5CF444BBB7177 /* Pods_StravaSDK.framework */; };
+		CDB188231F0B9BE900E6FE03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188221F0B9BE900E6FE03 /* AppDelegate.swift */; };
+		CDB188251F0B9BE900E6FE03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188241F0B9BE900E6FE03 /* ViewController.swift */; };
+		CDB188281F0B9BE900E6FE03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDB188261F0B9BE900E6FE03 /* Main.storyboard */; };
+		CDB1882A1F0B9BE900E6FE03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDB188291F0B9BE900E6FE03 /* Assets.xcassets */; };
+		CDB1882D1F0B9BE900E6FE03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDB1882B1F0B9BE900E6FE03 /* LaunchScreen.storyboard */; };
+		CDB188DC1F0B9F0E00E6FE03 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188BC1F0B9F0E00E6FE03 /* Activity.swift */; };
+		CDB188DD1F0B9F0E00E6FE03 /* Athlete.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188BD1F0B9F0E00E6FE03 /* Athlete.swift */; };
+		CDB188DE1F0B9F0E00E6FE03 /* Club.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188BE1F0B9F0E00E6FE03 /* Club.swift */; };
+		CDB188DF1F0B9F0E00E6FE03 /* DefaultRequestor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188BF1F0B9F0E00E6FE03 /* DefaultRequestor.swift */; };
+		CDB188E01F0B9F0E00E6FE03 /* JSONSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188C01F0B9F0E00E6FE03 /* JSONSupport.swift */; };
+		CDB188E11F0B9F0E00E6FE03 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188C11F0B9F0E00E6FE03 /* Keychain.swift */; };
+		CDB188E21F0B9F0E00E6FE03 /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188C21F0B9F0E00E6FE03 /* Leaderboard.swift */; };
+		CDB188E31F0B9F0E00E6FE03 /* LeaderboardEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188C31F0B9F0E00E6FE03 /* LeaderboardEntry.swift */; };
+		CDB188E41F0B9F0E00E6FE03 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188C41F0B9F0E00E6FE03 /* Map.swift */; };
+		CDB188E51F0B9F0E00E6FE03 /* MapBounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188C51F0B9F0E00E6FE03 /* MapBounds.swift */; };
+		CDB188E61F0B9F0E00E6FE03 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188C61F0B9F0E00E6FE03 /* Page.swift */; };
+		CDB188E71F0B9F0E00E6FE03 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188C71F0B9F0E00E6FE03 /* Photo.swift */; };
+		CDB188E81F0B9F0E00E6FE03 /* Polyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188C81F0B9F0E00E6FE03 /* Polyline.swift */; };
+		CDB188E91F0B9F0E00E6FE03 /* Requestor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188C91F0B9F0E00E6FE03 /* Requestor.swift */; };
+		CDB188EA1F0B9F0E00E6FE03 /* ResourceSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188CA1F0B9F0E00E6FE03 /* ResourceSummary.swift */; };
+		CDB188EB1F0B9F0E00E6FE03 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188CB1F0B9F0E00E6FE03 /* Route.swift */; };
+		CDB188EC1F0B9F0E00E6FE03 /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188CC1F0B9F0E00E6FE03 /* Segment.swift */; };
+		CDB188ED1F0B9F0E00E6FE03 /* SegmentEffort.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188CD1F0B9F0E00E6FE03 /* SegmentEffort.swift */; };
+		CDB188EE1F0B9F0E00E6FE03 /* SegmentStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188CE1F0B9F0E00E6FE03 /* SegmentStats.swift */; };
+		CDB188EF1F0B9F0E00E6FE03 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188CF1F0B9F0E00E6FE03 /* Stats.swift */; };
+		CDB188F01F0B9F0E00E6FE03 /* StatsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188D01F0B9F0E00E6FE03 /* StatsDetail.swift */; };
+		CDB188F11F0B9F0E00E6FE03 /* Strava.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188D11F0B9F0E00E6FE03 /* Strava.swift */; };
+		CDB188F21F0B9F0E00E6FE03 /* StravaActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188D21F0B9F0E00E6FE03 /* StravaActivity.swift */; };
+		CDB188F31F0B9F0E00E6FE03 /* StravaAthlete.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188D31F0B9F0E00E6FE03 /* StravaAthlete.swift */; };
+		CDB188F41F0B9F0E00E6FE03 /* StravaClub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188D41F0B9F0E00E6FE03 /* StravaClub.swift */; };
+		CDB188F51F0B9F0E00E6FE03 /* StravaSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188D61F0B9F0E00E6FE03 /* StravaSDK.swift */; };
+		CDB188F61F0B9F0E00E6FE03 /* StravaOAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188D71F0B9F0E00E6FE03 /* StravaOAuth.swift */; };
+		CDB188F71F0B9F0E00E6FE03 /* StravaRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188D81F0B9F0E00E6FE03 /* StravaRoute.swift */; };
+		CDB188F81F0B9F0E00E6FE03 /* StravaSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188D91F0B9F0E00E6FE03 /* StravaSegment.swift */; };
+		CDB188F91F0B9F0E00E6FE03 /* StravaUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188DA1F0B9F0E00E6FE03 /* StravaUpload.swift */; };
+		CDB188FA1F0B9F0E00E6FE03 /* Zones.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB188DB1F0B9F0E00E6FE03 /* Zones.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1FA67AC7162AFDE5279D020D /* Pods-StravaSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StravaSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-StravaSDK/Pods-StravaSDK.release.xcconfig"; sourceTree = "<group>"; };
+		2632F47FC4B5CF444BBB7177 /* Pods_StravaSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StravaSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F87FE330005D82865F1ACA6 /* Pods-StravaSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StravaSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StravaSDK/Pods-StravaSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		CDB1881F1F0B9BE900E6FE03 /* StravaSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StravaSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDB188221F0B9BE900E6FE03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CDB188241F0B9BE900E6FE03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CDB188271F0B9BE900E6FE03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CDB188291F0B9BE900E6FE03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDB1882C1F0B9BE900E6FE03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CDB1882E1F0B9BE900E6FE03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDB188BC1F0B9F0E00E6FE03 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		CDB188BD1F0B9F0E00E6FE03 /* Athlete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Athlete.swift; sourceTree = "<group>"; };
+		CDB188BE1F0B9F0E00E6FE03 /* Club.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Club.swift; sourceTree = "<group>"; };
+		CDB188BF1F0B9F0E00E6FE03 /* DefaultRequestor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultRequestor.swift; sourceTree = "<group>"; };
+		CDB188C01F0B9F0E00E6FE03 /* JSONSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONSupport.swift; sourceTree = "<group>"; };
+		CDB188C11F0B9F0E00E6FE03 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		CDB188C21F0B9F0E00E6FE03 /* Leaderboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
+		CDB188C31F0B9F0E00E6FE03 /* LeaderboardEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardEntry.swift; sourceTree = "<group>"; };
+		CDB188C41F0B9F0E00E6FE03 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		CDB188C51F0B9F0E00E6FE03 /* MapBounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapBounds.swift; sourceTree = "<group>"; };
+		CDB188C61F0B9F0E00E6FE03 /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		CDB188C71F0B9F0E00E6FE03 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		CDB188C81F0B9F0E00E6FE03 /* Polyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Polyline.swift; sourceTree = "<group>"; };
+		CDB188C91F0B9F0E00E6FE03 /* Requestor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requestor.swift; sourceTree = "<group>"; };
+		CDB188CA1F0B9F0E00E6FE03 /* ResourceSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceSummary.swift; sourceTree = "<group>"; };
+		CDB188CB1F0B9F0E00E6FE03 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		CDB188CC1F0B9F0E00E6FE03 /* Segment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segment.swift; sourceTree = "<group>"; };
+		CDB188CD1F0B9F0E00E6FE03 /* SegmentEffort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentEffort.swift; sourceTree = "<group>"; };
+		CDB188CE1F0B9F0E00E6FE03 /* SegmentStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentStats.swift; sourceTree = "<group>"; };
+		CDB188CF1F0B9F0E00E6FE03 /* Stats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
+		CDB188D01F0B9F0E00E6FE03 /* StatsDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsDetail.swift; sourceTree = "<group>"; };
+		CDB188D11F0B9F0E00E6FE03 /* Strava.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strava.swift; sourceTree = "<group>"; };
+		CDB188D21F0B9F0E00E6FE03 /* StravaActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StravaActivity.swift; sourceTree = "<group>"; };
+		CDB188D31F0B9F0E00E6FE03 /* StravaAthlete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StravaAthlete.swift; sourceTree = "<group>"; };
+		CDB188D41F0B9F0E00E6FE03 /* StravaClub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StravaClub.swift; sourceTree = "<group>"; };
+		CDB188D61F0B9F0E00E6FE03 /* StravaSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StravaSDK.swift; sourceTree = "<group>"; };
+		CDB188D71F0B9F0E00E6FE03 /* StravaOAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StravaOAuth.swift; sourceTree = "<group>"; };
+		CDB188D81F0B9F0E00E6FE03 /* StravaRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StravaRoute.swift; sourceTree = "<group>"; };
+		CDB188D91F0B9F0E00E6FE03 /* StravaSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StravaSegment.swift; sourceTree = "<group>"; };
+		CDB188DA1F0B9F0E00E6FE03 /* StravaUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StravaUpload.swift; sourceTree = "<group>"; };
+		CDB188DB1F0B9F0E00E6FE03 /* Zones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Zones.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CDB1881C1F0B9BE900E6FE03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD00A85F495CBB06824D06F5 /* Pods_StravaSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A9E7C892502690C350BCF31C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2632F47FC4B5CF444BBB7177 /* Pods_StravaSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC0DE74B1C4ADD91AA6C1E2C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F87FE330005D82865F1ACA6 /* Pods-StravaSDK.debug.xcconfig */,
+				1FA67AC7162AFDE5279D020D /* Pods-StravaSDK.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CDB188161F0B9BE900E6FE03 = {
+			isa = PBXGroup;
+			children = (
+				CDB188211F0B9BE900E6FE03 /* StravaSDK */,
+				CDB188201F0B9BE900E6FE03 /* Products */,
+				AC0DE74B1C4ADD91AA6C1E2C /* Pods */,
+				A9E7C892502690C350BCF31C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CDB188201F0B9BE900E6FE03 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CDB1881F1F0B9BE900E6FE03 /* StravaSDK.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CDB188211F0B9BE900E6FE03 /* StravaSDK */ = {
+			isa = PBXGroup;
+			children = (
+				CDB188341F0B9BFA00E6FE03 /* StravaSDK */,
+				CDB188221F0B9BE900E6FE03 /* AppDelegate.swift */,
+				CDB188241F0B9BE900E6FE03 /* ViewController.swift */,
+				CDB188261F0B9BE900E6FE03 /* Main.storyboard */,
+				CDB188291F0B9BE900E6FE03 /* Assets.xcassets */,
+				CDB1882B1F0B9BE900E6FE03 /* LaunchScreen.storyboard */,
+				CDB1882E1F0B9BE900E6FE03 /* Info.plist */,
+			);
+			path = StravaSDK;
+			sourceTree = "<group>";
+		};
+		CDB188341F0B9BFA00E6FE03 /* StravaSDK */ = {
+			isa = PBXGroup;
+			children = (
+				CDB188BC1F0B9F0E00E6FE03 /* Activity.swift */,
+				CDB188BD1F0B9F0E00E6FE03 /* Athlete.swift */,
+				CDB188BE1F0B9F0E00E6FE03 /* Club.swift */,
+				CDB188BF1F0B9F0E00E6FE03 /* DefaultRequestor.swift */,
+				CDB188C01F0B9F0E00E6FE03 /* JSONSupport.swift */,
+				CDB188C11F0B9F0E00E6FE03 /* Keychain.swift */,
+				CDB188C21F0B9F0E00E6FE03 /* Leaderboard.swift */,
+				CDB188C31F0B9F0E00E6FE03 /* LeaderboardEntry.swift */,
+				CDB188C41F0B9F0E00E6FE03 /* Map.swift */,
+				CDB188C51F0B9F0E00E6FE03 /* MapBounds.swift */,
+				CDB188C61F0B9F0E00E6FE03 /* Page.swift */,
+				CDB188C71F0B9F0E00E6FE03 /* Photo.swift */,
+				CDB188C81F0B9F0E00E6FE03 /* Polyline.swift */,
+				CDB188C91F0B9F0E00E6FE03 /* Requestor.swift */,
+				CDB188CA1F0B9F0E00E6FE03 /* ResourceSummary.swift */,
+				CDB188CB1F0B9F0E00E6FE03 /* Route.swift */,
+				CDB188CC1F0B9F0E00E6FE03 /* Segment.swift */,
+				CDB188CD1F0B9F0E00E6FE03 /* SegmentEffort.swift */,
+				CDB188CE1F0B9F0E00E6FE03 /* SegmentStats.swift */,
+				CDB188CF1F0B9F0E00E6FE03 /* Stats.swift */,
+				CDB188D01F0B9F0E00E6FE03 /* StatsDetail.swift */,
+				CDB188D11F0B9F0E00E6FE03 /* Strava.swift */,
+				CDB188D21F0B9F0E00E6FE03 /* StravaActivity.swift */,
+				CDB188D31F0B9F0E00E6FE03 /* StravaAthlete.swift */,
+				CDB188D41F0B9F0E00E6FE03 /* StravaClub.swift */,
+				CDB188D61F0B9F0E00E6FE03 /* StravaSDK.swift */,
+				CDB188D71F0B9F0E00E6FE03 /* StravaOAuth.swift */,
+				CDB188D81F0B9F0E00E6FE03 /* StravaRoute.swift */,
+				CDB188D91F0B9F0E00E6FE03 /* StravaSegment.swift */,
+				CDB188DA1F0B9F0E00E6FE03 /* StravaUpload.swift */,
+				CDB188DB1F0B9F0E00E6FE03 /* Zones.swift */,
+			);
+			path = StravaSDK;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CDB1881E1F0B9BE900E6FE03 /* StravaSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDB188311F0B9BE900E6FE03 /* Build configuration list for PBXNativeTarget "StravaSDK" */;
+			buildPhases = (
+				1C7D95F8FF7F4EC8894526EC /* [CP] Check Pods Manifest.lock */,
+				CDB1881B1F0B9BE900E6FE03 /* Sources */,
+				CDB1881C1F0B9BE900E6FE03 /* Frameworks */,
+				CDB1881D1F0B9BE900E6FE03 /* Resources */,
+				CF04A00EE7028AA81FA2AB84 /* [CP] Embed Pods Frameworks */,
+				FAE2DC745D0CA518B1DE65D6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StravaSDK;
+			productName = StravaSDK;
+			productReference = CDB1881F1F0B9BE900E6FE03 /* StravaSDK.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CDB188171F0B9BE900E6FE03 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = xaoxuu;
+				TargetAttributes = {
+					CDB1881E1F0B9BE900E6FE03 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 6C36HX8DP4;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CDB1881A1F0B9BE900E6FE03 /* Build configuration list for PBXProject "StravaSDK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CDB188161F0B9BE900E6FE03;
+			productRefGroup = CDB188201F0B9BE900E6FE03 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CDB1881E1F0B9BE900E6FE03 /* StravaSDK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CDB1881D1F0B9BE900E6FE03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDB1882D1F0B9BE900E6FE03 /* LaunchScreen.storyboard in Resources */,
+				CDB1882A1F0B9BE900E6FE03 /* Assets.xcassets in Resources */,
+				CDB188281F0B9BE900E6FE03 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C7D95F8FF7F4EC8894526EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CF04A00EE7028AA81FA2AB84 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StravaSDK/Pods-StravaSDK-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAE2DC745D0CA518B1DE65D6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StravaSDK/Pods-StravaSDK-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CDB1881B1F0B9BE900E6FE03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDB188F11F0B9F0E00E6FE03 /* Strava.swift in Sources */,
+				CDB188E71F0B9F0E00E6FE03 /* Photo.swift in Sources */,
+				CDB188EF1F0B9F0E00E6FE03 /* Stats.swift in Sources */,
+				CDB188F91F0B9F0E00E6FE03 /* StravaUpload.swift in Sources */,
+				CDB188EE1F0B9F0E00E6FE03 /* SegmentStats.swift in Sources */,
+				CDB188DC1F0B9F0E00E6FE03 /* Activity.swift in Sources */,
+				CDB188E61F0B9F0E00E6FE03 /* Page.swift in Sources */,
+				CDB188F21F0B9F0E00E6FE03 /* StravaActivity.swift in Sources */,
+				CDB188ED1F0B9F0E00E6FE03 /* SegmentEffort.swift in Sources */,
+				CDB188EA1F0B9F0E00E6FE03 /* ResourceSummary.swift in Sources */,
+				CDB188251F0B9BE900E6FE03 /* ViewController.swift in Sources */,
+				CDB188F71F0B9F0E00E6FE03 /* StravaRoute.swift in Sources */,
+				CDB188F51F0B9F0E00E6FE03 /* StravaSDK.swift in Sources */,
+				CDB188E91F0B9F0E00E6FE03 /* Requestor.swift in Sources */,
+				CDB188DF1F0B9F0E00E6FE03 /* DefaultRequestor.swift in Sources */,
+				CDB188E51F0B9F0E00E6FE03 /* MapBounds.swift in Sources */,
+				CDB188EC1F0B9F0E00E6FE03 /* Segment.swift in Sources */,
+				CDB188F61F0B9F0E00E6FE03 /* StravaOAuth.swift in Sources */,
+				CDB188F31F0B9F0E00E6FE03 /* StravaAthlete.swift in Sources */,
+				CDB188E01F0B9F0E00E6FE03 /* JSONSupport.swift in Sources */,
+				CDB188EB1F0B9F0E00E6FE03 /* Route.swift in Sources */,
+				CDB188FA1F0B9F0E00E6FE03 /* Zones.swift in Sources */,
+				CDB188DE1F0B9F0E00E6FE03 /* Club.swift in Sources */,
+				CDB188E11F0B9F0E00E6FE03 /* Keychain.swift in Sources */,
+				CDB188F81F0B9F0E00E6FE03 /* StravaSegment.swift in Sources */,
+				CDB188F01F0B9F0E00E6FE03 /* StatsDetail.swift in Sources */,
+				CDB188E31F0B9F0E00E6FE03 /* LeaderboardEntry.swift in Sources */,
+				CDB188E41F0B9F0E00E6FE03 /* Map.swift in Sources */,
+				CDB188231F0B9BE900E6FE03 /* AppDelegate.swift in Sources */,
+				CDB188E81F0B9F0E00E6FE03 /* Polyline.swift in Sources */,
+				CDB188F41F0B9F0E00E6FE03 /* StravaClub.swift in Sources */,
+				CDB188E21F0B9F0E00E6FE03 /* Leaderboard.swift in Sources */,
+				CDB188DD1F0B9F0E00E6FE03 /* Athlete.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CDB188261F0B9BE900E6FE03 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDB188271F0B9BE900E6FE03 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CDB1882B1F0B9BE900E6FE03 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDB1882C1F0B9BE900E6FE03 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CDB1882F1F0B9BE900E6FE03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CDB188301F0B9BE900E6FE03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CDB188321F0B9BE900E6FE03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F87FE330005D82865F1ACA6 /* Pods-StravaSDK.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6C36HX8DP4;
+				INFOPLIST_FILE = StravaSDK/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xaoxuu.modules.StravaSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CDB188331F0B9BE900E6FE03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FA67AC7162AFDE5279D020D /* Pods-StravaSDK.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6C36HX8DP4;
+				INFOPLIST_FILE = StravaSDK/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xaoxuu.modules.StravaSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CDB1881A1F0B9BE900E6FE03 /* Build configuration list for PBXProject "StravaSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDB1882F1F0B9BE900E6FE03 /* Debug */,
+				CDB188301F0B9BE900E6FE03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDB188311F0B9BE900E6FE03 /* Build configuration list for PBXNativeTarget "StravaSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDB188321F0B9BE900E6FE03 /* Debug */,
+				CDB188331F0B9BE900E6FE03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CDB188171F0B9BE900E6FE03 /* Project object */;
+}

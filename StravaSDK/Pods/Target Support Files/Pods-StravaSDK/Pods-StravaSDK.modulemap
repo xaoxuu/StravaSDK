@@ -1,0 +1,6 @@
+framework module Pods_StravaSDK {
+  umbrella header "Pods-StravaSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}
