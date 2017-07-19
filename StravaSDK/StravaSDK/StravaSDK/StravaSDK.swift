@@ -44,7 +44,7 @@ public class StravaSDK : NSObject {
     }
     
     /// 授权
-    public func authorizeStrava() {
+    public func authorize() {
         
         NotificationCenter.default.addObserver(self, selector: #selector(StravaSDK.stravaAuthorizationCompleted(_:)), name: NSNotification.Name(rawValue: StravaAuthorizationCompletedNotification), object: nil)
         
@@ -61,7 +61,7 @@ public class StravaSDK : NSObject {
     }
     
     /// 取消授权
-    public func deauthorizeStrava() {
+    public func deauthorize() {
         Strava.deauthorize { (success, error) in
             
             if success {
