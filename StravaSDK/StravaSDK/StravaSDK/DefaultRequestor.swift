@@ -180,7 +180,12 @@ extension Requestor {
     
     public func uploadFitFile(url: String, params: [String : String]?, file: URL, completionHandler: ((_ response: Any?, _ error: NSError?) -> ())?) {
         
-        let accessToken = Strava.sharedInstance.accessToken!
+        guard let accessToken = Strava.sharedInstance.accessToken
+            else {
+                let error = Strava.error(.noAccessToken, reason: "No Access Token")
+                completionHandler?(nil, error)
+                return
+        }
         debugPrint(accessToken)
         let au = "Bearer \(accessToken)"
         let headers = ["Authorization": au]

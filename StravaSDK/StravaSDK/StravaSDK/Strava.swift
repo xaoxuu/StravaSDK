@@ -72,6 +72,12 @@ public enum StravaErrorCode: Int {
     case undefinedError = 599
 }
 
+public enum StravaUserDefaultKey: String {
+    case clientId = "StravaClientID"
+    case clientSecret = "StravaClientSecret"
+    case accessToken = "StravaAccessToken"
+}
+
 /**
  Strava class for handling all API endpoint requests.
  */
@@ -132,7 +138,7 @@ open class Strava {
 
     open static func configure(accessToken: String?, athleteDictionary: JSONDictionary? = nil, alternateRequestor: Requestor? = nil) {
         sharedInstance.accessToken = accessToken
-        UserDefaults.standard.set(accessToken, forKey: "accessToken")
+        UserDefaults.standard.set(accessToken, forKey: StravaUserDefaultKey.accessToken.rawValue)
         UserDefaults.standard.synchronize()
         sharedInstance.athlete = Athlete(dictionary: athleteDictionary ?? [:])
         sharedInstance.alternateRequestor = alternateRequestor

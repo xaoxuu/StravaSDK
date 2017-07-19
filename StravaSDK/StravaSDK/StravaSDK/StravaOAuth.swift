@@ -253,7 +253,9 @@ public extension Strava {
             sharedInstance.accessToken = accessToken
             sharedInstance.athlete = Athlete(dictionary: athleteDictionary)
             sharedInstance.storeAccessData()
-            assert(sharedInstance.athlete != nil, "Athlete is required")
+            UserDefaults.standard.set(accessToken, forKey: StravaUserDefaultKey.accessToken.rawValue)
+            UserDefaults.standard.synchronize()
+//            assert(sharedInstance.athlete != nil, "Athlete is required")
             DispatchQueue.main.async {
                 completionHandler?(true, nil)
             }
