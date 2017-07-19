@@ -1,0 +1,98 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "0.1.0",
+  "isShellCommand": true,
+  "showOutput": "always",
+  "command": "sh",
+  "args": [
+    "-c"
+  ],
+  "suppressTaskName": true,
+  "tasks": [
+    {
+      "taskName": "A: Build iOS Project",
+      "isBuildCommand": true,
+      "args": [
+        "${workspaceRoot}/scripts/tasks.sh build"
+      ]
+    },
+    {
+      "taskName": "B: Run Tests",
+      "isBuildCommand": false,
+      "args": [
+        "${workspaceRoot}/scripts/tasks.sh test"
+      ]
+    },
+    {
+      "taskName": "C: Clean Build",
+      "isBuildCommand": false,
+      "args": [
+        "${workspaceRoot}/scripts/tasks.sh clean"
+      ]
+    },
+    {
+      "taskName": "D: Run Jazzy",
+      "isBuildCommand": false,
+      "args": [
+        "${workspaceRoot}/scripts/tasks.sh jazzy"
+      ]
+    },
+    {
+      "taskName": "E: Set Up Dependencies",
+      "isBuildCommand": false,
+      "args": [
+        "${workspaceRoot}/scripts/tasks.sh setup"
+      ]
+    },
+    {
+      "taskName": "F: Run All",
+      "isBuildCommand": false,
+      "args": [
+        "${workspaceRoot}/scripts/tasks.sh all"
+      ]
+    },
+    {
+      "taskName": "G: Install Gems",
+      "isBuildCommand": false,
+      "args": [
+        "${workspaceRoot}/scripts/tasks.sh bundle-install"
+      ]
+    },
+    {
+      "taskName": "H: CocoaPods - Reset Integration",
+      "isBuildCommand": false,
+      "args": [
+        "${workspaceRoot}/scripts/tasks.sh pod-reset"
+      ]
+    },
+    {
+      "taskName": "I: CocoaPods - Install Dependencies",
+      "isBuildCommand": false,
+      "args": [
+        "${workspaceRoot}/scripts/tasks.sh pod-install"
+      ]
+    },
+    {
+      "taskName": "J: CocoaPods - Update Dependencies",
+      "isBuildCommand": false,
+      "args": [
+        "${workspaceRoot}/scripts/tasks.sh pod-update"
+      ]
+    },
+    {
+      "taskName": "K: CocoaPods - Lint Spec",
+      "isBuildCommand": false,
+      "args": [
+        "${workspaceRoot}/scripts/tasks.sh pod-spec-lint"
+      ]
+    },
+    {
+      "taskName": "L: CocoaPods - Push Trunk",
+      "isBuildCommand": false,
+      "args": [
+        "${workspaceRoot}/scripts/tasks.sh pod-trunk-push"
+      ]
+    }
+  ]
+}
