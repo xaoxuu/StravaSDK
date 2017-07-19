@@ -74,14 +74,16 @@ public class StravaSDK : NSObject {
         sharedInstance.deauthorize()
     }
     public func deauthorize() {
+        // 清除缓存
+        let ud = UserDefaults.standard
+        ud.set(false, forKey: self.getMonthOfYear())
+        ud.synchronize()
+        // 取消授权
         Strava.deauthorize { (success, error) in
-            
             if success {
                 debugPrint("Deauthorization successful!")
                 // 取消授权成功 "Deauthorization successful!"
-                let ud = UserDefaults.standard
-                ud.set(false, forKey: self.getMonthOfYear())
-                ud.synchronize()
+                
             }
             else {
                 // TODO: warn user
