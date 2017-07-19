@@ -14,15 +14,26 @@ public class StravaSDK : NSObject {
     
     internal static let sharedInstance = StravaSDK()
     
-    fileprivate let ClientIDKey: String = "StravaClientID"
-    fileprivate let ClientSecretKey: String = "StravaClientSecret"
-    
     var vc = (UIApplication.shared.delegate as! UIResponder).value(forKeyPath: "window.rootViewController") as! UIViewController
     var clientId = "18583"
     var clientSecret = "a05fde98a830effde2e0f84cc39d76b040d4d67e"
     var appSchemes = "stravasdk"
     var safariViewController: SFSafariViewController? = nil
     
+    
+    // MARK: 配置环境
+    
+    /// 配置环境
+    ///
+    /// - Parameters:
+    ///   - clientId: 客户端Id
+    ///   - clientSecret: 客户端私钥
+    ///   - appSchemes: app的URL Schemes
+    public func config(clientId: String, clientSecret: String, appSchemes: String) {
+        self.clientId = clientId
+        self.clientSecret = clientSecret
+        self.appSchemes = appSchemes
+    }
     
     // MARK: 授权
     
@@ -71,27 +82,26 @@ public class StravaSDK : NSObject {
     
     // MARK: 上传fit文件
     
-    /// 上传fit文件
+    /// 上传活动数据fit文件
     ///
     /// - Parameters:
     ///   - path: 文件路径
     ///   - activityType: 活动类型
     ///   - activityName: 活动名称
     ///   - completionHandler: 完成回调
-    public func uploadFitFile(path: String, activityType: String, activityName: String, completionHandler: ((_ response: Any?, _ error: NSError?) -> ())?) {
-        Strava.uploadFit(filePath: path, activityType: activityType, activityName: activityName, completionHandler: completionHandler)
+    public func uploadActivity(path: String, type: String, name: String, completionHandler: ((_ response: Any?, _ error: NSError?) -> ())?) {
+        Strava.uploadFit(filePath: path, activityType: type, activityName: name, completionHandler: completionHandler)
     }
     
-    /// 上传fit文件
+    /// 上传fit文件（自定义params）
     ///
     /// - Parameters:
     ///   - path: 文件路径
     ///   - params: 参数
     ///   - completionHandler: 完成回调
-    public func uploadFitFile(path: String, params: [String : String], completionHandler: ((_ response: Any?, _ error: NSError?) -> ())?) {
+    public func uploadActivity(path: String, params: [String : String], completionHandler: ((_ response: Any?, _ error: NSError?) -> ())?) {
         Strava.uploadFit(filePath: path, params: params, completionHandler: completionHandler)
     }
-    
     
     
     // MARK: open url
@@ -128,8 +138,8 @@ public class StravaSDK : NSObject {
     
     internal func storeDefaults() {
         let defaults = UserDefaults.standard
-        defaults.set(clientId, forKey: ClientIDKey)
-        defaults.set(clientSecret, forKey: ClientSecretKey)
+        defaults.set(clientId, forKey: StravaUserDefaultKey.clientId.rawValue)
+        defaults.set(clientSecret, forKey: StravaUserDefaultKey.clientSecret.rawValue)
     }
     
     internal func getMonthOfYear() -> String {
