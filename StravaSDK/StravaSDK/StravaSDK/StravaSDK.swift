@@ -29,6 +29,9 @@ public class StravaSDK : NSObject {
     ///   - clientId: 客户端Id
     ///   - clientSecret: 客户端私钥
     ///   - appSchemes: app的URL Schemes
+    public static func config(clientId: String, clientSecret: String, appSchemes: String) {
+        sharedInstance.config(clientId: clientId, clientSecret: clientSecret, appSchemes: appSchemes)
+    }
     public func config(clientId: String, clientSecret: String, appSchemes: String) {
         self.clientId = clientId
         self.clientSecret = clientSecret
@@ -38,12 +41,18 @@ public class StravaSDK : NSObject {
     // MARK: 授权
     
     /// 是否已经授权
+    public static var isAuthorized: Bool {
+        return sharedInstance.isAuthorized
+    }
     public var isAuthorized: Bool {
         let ud = UserDefaults.standard
         return ud.bool(forKey: getMonthOfYear())
     }
     
     /// 授权
+    public static func authorize() {
+        sharedInstance.authorize()
+    }
     public func authorize() {
         
         NotificationCenter.default.addObserver(self, selector: #selector(StravaSDK.stravaAuthorizationCompleted(_:)), name: NSNotification.Name(rawValue: StravaAuthorizationCompletedNotification), object: nil)
@@ -61,6 +70,9 @@ public class StravaSDK : NSObject {
     }
     
     /// 取消授权
+    public static func deauthorize() {
+        sharedInstance.deauthorize()
+    }
     public func deauthorize() {
         Strava.deauthorize { (success, error) in
             
@@ -89,6 +101,9 @@ public class StravaSDK : NSObject {
     ///   - activityType: 活动类型
     ///   - activityName: 活动名称
     ///   - completionHandler: 完成回调
+    public static func uploadActivity(path: String, type: String, name: String, completionHandler: ((_ response: Any?, _ error: NSError?) -> ())?) {
+        sharedInstance.uploadActivity(path: path, type: type, name: name, completionHandler: completionHandler)
+    }
     public func uploadActivity(path: String, type: String, name: String, completionHandler: ((_ response: Any?, _ error: NSError?) -> ())?) {
         Strava.uploadFit(filePath: path, activityType: type, activityName: name, completionHandler: completionHandler)
     }
@@ -99,10 +114,12 @@ public class StravaSDK : NSObject {
     ///   - path: 文件路径
     ///   - params: 参数
     ///   - completionHandler: 完成回调
+    public static func uploadActivity(path: String, params: [String : String], completionHandler: ((_ response: Any?, _ error: NSError?) -> ())?) {
+        sharedInstance.uploadActivity(path: path, params: params, completionHandler: completionHandler)
+    }
     public func uploadActivity(path: String, params: [String : String], completionHandler: ((_ response: Any?, _ error: NSError?) -> ())?) {
         Strava.uploadFit(filePath: path, params: params, completionHandler: completionHandler)
     }
-    
     
     // MARK: open url
     public static func openURL(_ aURL: URL, sourceApplication: String?) -> Bool {
