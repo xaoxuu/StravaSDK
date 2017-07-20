@@ -15,9 +15,10 @@ public class StravaSDK : NSObject {
     internal static let sharedInstance = StravaSDK()
     
     var vc = (UIApplication.shared.delegate as! UIResponder).value(forKeyPath: "window.rootViewController") as! UIViewController
-    var clientId = "18583"
-    var clientSecret = "a05fde98a830effde2e0f84cc39d76b040d4d67e"
-    var appSchemes = "stravasdk"
+    
+    var clientId = ""
+    var clientSecret = ""
+    var appSchemes = ""
     var safariViewController: SFSafariViewController? = nil
     
     
