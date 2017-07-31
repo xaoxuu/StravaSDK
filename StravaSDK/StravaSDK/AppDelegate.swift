@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // 配置strava
-        StravaSDK .config(clientId: "18583", clientSecret: "a05fde98a830effde2e0f84cc39d76b040d4d67e", appSchemes: "stravasdk")
+        StravaSDK.config(clientId: "18583", clientSecret: "a05fde98a830effde2e0f84cc39d76b040d4d67e", appSchemes: "stravasdk")
         
         return true
     }

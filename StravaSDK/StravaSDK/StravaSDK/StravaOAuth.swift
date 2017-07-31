@@ -131,13 +131,19 @@ public extension Strava {
                 return false
         }
 
-        guard let sa = sourceApplication, sa == "com.apple.SafariViewService",
-            let uri = sharedInstance.redirectURI,
+//        guard let sa = sourceApplication, sa == "com.apple.SafariViewService",
+//            let uri = sharedInstance.redirectURI,
+//            let _ = aURL.absoluteString.range(of: uri)
+//            else {
+//                return false
+//        }
+	
+        guard let uri = sharedInstance.redirectURI,
             let _ = aURL.absoluteString.range(of: uri)
             else {
                 return false
         }
-
+        
         var error: NSError? = nil
 
         // The user can tap the cancel button which results in an access denied error.

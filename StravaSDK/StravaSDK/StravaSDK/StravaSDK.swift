@@ -19,7 +19,7 @@ public class StravaSDK : NSObject {
     var clientId = ""
     var clientSecret = ""
     var appSchemes = ""
-    var safariViewController: SFSafariViewController? = nil
+//    var safariViewController: SFSafariViewController? = nil
     
     
     // MARK: 配置环境
@@ -71,9 +71,11 @@ public class StravaSDK : NSObject {
         Strava.set(clientId: clientId, clientSecret: clientSecret, redirectURI: redirectURI)
         
         if let URL = Strava.userLogin(scope: .PrivateWrite) {
-            let sf = SFSafariViewController(url: URL, entersReaderIfAvailable: false)
-            self.vc.present(sf, animated: true, completion: nil)
-            safariViewController = sf
+            
+            UIApplication.shared.openURL(URL)
+//            let sf = SFSafariViewController(url: URL, entersReaderIfAvailable: false)
+//            self.vc.present(sf, animated: true, completion: nil)
+//            safariViewController = sf
         }
         
     }
@@ -159,8 +161,8 @@ public class StravaSDK : NSObject {
     // MARK: internal
     internal func stravaAuthorizationCompleted(_ notification: Notification?) {
         assert(Thread.isMainThread, "Main Thread is required")
-        safariViewController?.dismiss(animated: true, completion: nil)
-        safariViewController = nil
+//        safariViewController?.dismiss(animated: true, completion: nil)
+//        safariViewController = nil
         
         guard let userInfo = notification?.userInfo,
             let status = userInfo[StravaStatusKey] as? String else {
