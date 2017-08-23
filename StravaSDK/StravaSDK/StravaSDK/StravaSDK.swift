@@ -53,6 +53,10 @@ public class StravaSDK : NSObject {
     }
     /// 是否已经授权
     public var isAuthorized: Bool {
+        guard let _ = Strava.sharedInstance.accessToken
+            else {
+            return false
+        }
         let ud = UserDefaults.standard
         return ud.bool(forKey: getMonthOfYear())
     }
